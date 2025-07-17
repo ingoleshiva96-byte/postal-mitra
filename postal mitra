@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Postal Mitra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+    header {
+      background-color: #a10d23;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .container {
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #a10d23;
+    }
+    .scheme {
+      background: white;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    form input, form select {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #a10d23;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #eee;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/77/India_Post_Logo.svg" alt="India Post Logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#schemes">Schemes</a>
+      <a href="#apply">Apply Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container" id="home">
+    <h1>Welcome to Postal Mitra</h1>
+    <p>Your trusted guide for all India Post savings and insurance schemes. We help you understand and apply easily.</p>
+  </div>
+
+  <div class="container" id="schemes">
+    <h2>Postal Schemes</h2>
+    <div class="scheme"><strong>NSC (National Savings Certificate):</strong> 5-year savings bond with tax benefits.</div>
+    <div class="scheme"><strong>KVP (Kisan Vikas Patra):</strong> Doubles your money in ~10 years.</div>
+    <div class="scheme"><strong>PLI (Postal Life Insurance):</strong> Life insurance with high bonus and low premium.</div>
+    <div class="scheme"><strong>RPLI (Rural PLI):</strong> Insurance plans specially for rural India.</div>
+    <div class="scheme"><strong>RD (Recurring Deposit):</strong> Monthly savings with compound interest.</div>
+    <div class="scheme"><strong>TD (Time Deposit):</strong> Fixed return deposit accounts with flexible tenures.</div>
+    <div class="scheme"><strong>MIS (Monthly Income Scheme):</strong> Fixed monthly income for 5 years.</div>
+    <div class="scheme"><strong>SCSS (Senior Citizens Saving Scheme):</strong> Best for senior citizens with high returns.</div>
+    <div class="scheme"><strong>SSY (Sukanya Samriddhi Yojana):</strong> Secure your girl child's future.</div>
+  </div>
+
+  <div class="container" id="apply">
+    <h2>Apply Now</h2>
+    <form id="applyForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Mobile Number" required>
+      <select id="scheme">
+        <option value="NSC">NSC</option>
+        <option value="KVP">KVP</option>
+        <option value="PLI">PLI</option>
+        <option value="RPLI">RPLI</option>
+        <option value="RD">RD</option>
+        <option value="TD">TD</option>
+        <option value="MIS">MIS</option>
+        <option value="SCSS">SCSS</option>
+        <option value="SSY">SSY</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="container" id="contact">
+    <h2>Contact Us</h2>
+    <p>For any help, click below to chat directly on WhatsApp:</p>
+    <a href="https://wa.me/919156433751" target="_blank">Chat on WhatsApp</a>
+  </div>
+
+  <a class="whatsapp" href="https://wa.me/919156433751" target="_blank">💬</a>
+
+  <footer>
+    &copy; 2025 Postal Mitra. Powered by you.
+  </footer>
+
+  <script>
+    document.getElementById('applyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const scheme = document.getElementById('scheme').value;
+      const message = `Hello, I am ${name}. I am interested in the ${scheme} scheme. My contact number is ${phone}.`;
+      const url = `https://wa.me/919156433751?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
+
